@@ -98,6 +98,12 @@ void Object::setObject(istream& ins) {
         setX(x);
         setY(y);
         
+    } else if (objectType == WIZARD) {
+        
+        ins >> x >> y;
+        
+        setX(x);
+        setY(y);
     }
 }
 

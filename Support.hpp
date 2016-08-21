@@ -62,6 +62,7 @@ const string RAD_STRING = "rad: ";
 const string RAD_POINT = "Rxy: ";
 
 const char PLAYER = 'P';
+const char WIZARD = 'W';
 const char BEAST = 'B';
 const char DARK = 'S';
 const char CAVE = 'C';
