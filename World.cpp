@@ -295,6 +295,14 @@ Player& World::getPlayer() {
     return player;
 }
 
+void World::setPlayer(Player player1) {
+    
+    player.setPlayerName(player1.getPlayerName());
+    player.setPlayerHealth(player1.getPlayerHealth());
+    player.setPlayerSteps(player1.getPlayerSteps());
+    
+}
+
 void World::deleteWorld() {
     
     Object newWorld;

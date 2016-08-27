@@ -18,6 +18,8 @@ int main() {
     
     World shade;
     World cave;
+    Position playerPos;
+    
     
     defaultWorld(shade);
     circularDevelopment(shade);
