@@ -99,6 +99,11 @@ Position World::getCenter() {
     return center;
 }
 
+void World::setPlayerCave(bool caveTruth) {
+ 
+    player.setCave(caveTruth);
+}
+
 void World::moveObject(Object& object, char direction) {
     
     Object blank;
@@ -220,6 +225,20 @@ void World::moveObject(Object& object, char direction) {
         if (object.getType() == PLAYER) {
             player.killPlayer();
         }
+        
+    } else if (future.getType() == CAVE) {
+        
+        setPlayerCave(true);
+        
+    }
+    
+    if (player.getCavePos()) {
+        
+        if ((player.getPlayerCoord().getY() == CAVE_START_Y + 1) &&
+            (direction == MOVE_DOWN)) {
+            
+            setPlayerCave(false);
+        }
     }
     
 }
@@ -300,6 +319,7 @@ void World::setPlayer(Player player1) {
     player.setPlayerName(player1.getPlayerName());
     player.setPlayerHealth(player1.getPlayerHealth());
     player.setPlayerSteps(player1.getPlayerSteps());
+    player.setCave(player1.getCavePos());
     
 }
 

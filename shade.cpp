@@ -35,14 +35,22 @@ int main() {
     
     
     while (shade.getPlayer().getPlayerHealth() > 0) {
-       
         
-        shade.displayWorld();
-        movePlayer(shade);
-        playerPos = shade.getPlayer().getPlayerCoord();
-        assignShade(shade, DEFAULT_DIFF, SHADE_DIFFICULTY, CIRC_DEVELOP);
-        assignBeast(shade, CIRC_DEVELOP);
-        assignCave(shade);
+        if (!shade.getPlayer().getCavePos()) {
+       
+            shade.displayWorld();
+            movePlayer(shade);
+            playerPos = shade.getPlayer().getPlayerCoord();
+            cave.setPlayer(shade.getPlayer());
+            assignShade(shade, DEFAULT_DIFF, SHADE_DIFFICULTY, CIRC_DEVELOP);
+            assignBeast(shade, CIRC_DEVELOP);
+            assignCave(shade);
+            
+        } else {
+            
+            cave.displayWorld();
+            movePlayer(shade);
+        }
         
     }
     

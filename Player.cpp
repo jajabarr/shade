@@ -13,6 +13,7 @@ Player::Player() {
     playerHealth = 0;
     playerSteps = 0;
     playerName = "";
+    inCave = false;
     
 }
 
@@ -77,6 +78,23 @@ void Player::setPlayerCoord(Position position) {
 Position& Player::getPlayerCoord() {
     
     return playerCoord;
+}
+
+void Player::setCave(bool caveman) {
+    
+    if (caveman) {
+        
+        inCave = true;
+        
+    } else {
+        
+        inCave = false;
+    }
+}
+
+bool Player::getCavePos() {
+    
+    return inCave;
 }
 
 void Player::addStep() {

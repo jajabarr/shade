@@ -24,6 +24,7 @@ private:
     int playerSteps;
     string playerName;
     Position playerCoord;
+    bool inCave;
     
 public:
     
@@ -49,6 +50,10 @@ public:
     void decreaseHealth();
     void killPlayer();
     void playerFullHealth();
+    
+    bool getCavePos();
+    void setCave(bool caveman);
+    
     
     
     

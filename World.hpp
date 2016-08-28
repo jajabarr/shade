@@ -53,6 +53,8 @@ public:
     void addBeast();
     int getNumBeasts();
     
+    void setPlayerCave (bool caveTruth);
+    
     
     
 private:
