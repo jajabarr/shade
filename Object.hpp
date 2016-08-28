@@ -16,11 +16,12 @@
 #include "Beast.hpp"
 #include "Dark.hpp"
 #include "Cave.hpp"
+#include "Wizard.hpp"
 #include "Position.hpp"
 
 using namespace std;
 
-class Object : public Player, public Beast, public Dark, public Position {
+class Object : public Player, public Beast, public Dark, public Cave, public Wizard, public Position {
     
 public:
     

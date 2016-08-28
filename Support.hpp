@@ -16,6 +16,11 @@ using namespace std;
 
 class Position;
 
+const int DEFAULT_DIFF = 1;
+
+const int CAVE_START_X = 25;
+const int CAVE_START_Y = 24;
+
 const int WORLD_SIZE_X = 50;
 const int WORLD_SIZE_Y = 25;
 
@@ -28,13 +33,15 @@ const int STARTING_SHADE = 360;
 const int SHADE_DIFFICULTY = 100;
 
 const int BEAST_DIFFICULTY_ONE = 100;
-const int BEAST_DIFFICULTY_TWO = 200;
-const int BEAST_DIFFICULTY_THREE = 300;
-const int BEAST_DIFFICULTY_FOUR = 400;
-const int BEAST_DIFFICULTY_FIVE = 500;
+const int BEAST_DIFFICULTY_TWO = 300;
+const int BEAST_DIFFICULTY_THREE = 500;
+const int BEAST_DIFFICULTY_FOUR = 600;
+const int BEAST_DIFFICULTY_FIVE = 700;
 
-const int SPAWN_ONE = 5;
-const int SPAWN_TWO = 4;
+const int CAVE_SPAWN = 100;
+
+const int SPAWN_ONE = 7;
+const int SPAWN_TWO = 5;
 const int SPAWN_THREE = 3;
 const int SPAWN_FOUR = 2;
 const int SPAWN_FIVE = 1;

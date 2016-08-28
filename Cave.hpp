@@ -10,5 +10,18 @@
 #define Cave_hpp
 
 #include <stdio.h>
+#include <iostream>
+
 
 #endif /* Cave_hpp */
+
+class Cave {
+    
+private:
+    int caveDamage;
+    
+public:
+    Cave();
+    int getCave();
+
+};

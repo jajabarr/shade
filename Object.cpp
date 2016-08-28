@@ -51,6 +51,16 @@ void Object::createObject(char type) {
         
         objectType = DARK;
         damage = getDark();
+    
+    } else if (type == CAVE) {
+        
+        objectType = CAVE;
+        damage = getCave();
+    
+    } else if (type == WIZARD) {
+        
+        objectType = WIZARD;
+        damage = getWiz();
     }
 }
 
@@ -102,9 +112,21 @@ void Object::setObject(istream& ins) {
         
         ins >> x >> y;
         
+        damage = getWiz();
+        
+        setX(x);
+        setY(y);
+    
+    } else if (objectType == CAVE) {
+        
+        ins >> x >> y;
+        
+        damage = getCave();
+        
         setX(x);
         setY(y);
     }
+    
 }
 
 void Object::getObject(ostream& outs) {
@@ -123,6 +145,14 @@ void Object::getObject(ostream& outs) {
         outs << damage << space << getBeastID() << getX() << space << getY();
         
     } else if (objectType == DARK) {
+        
+        outs << getX() << space << getY();
+        
+    } else if (objectType == CAVE) {
+        
+        outs << getX() << space << getY();
+        
+    } else if (objectType == WIZARD) {
         
         outs << getX() << space << getY();
     }

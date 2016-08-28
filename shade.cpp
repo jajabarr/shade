@@ -12,6 +12,7 @@
 #include "World.hpp"
 #include "Gameplay.hpp"
 #include "ShadeDevelop.hpp"
+#include "CaveDevelop.hpp"
 #include "Support.hpp"
 
 int main() {
@@ -28,16 +29,21 @@ int main() {
     
     addShade(shade);
     
-    cave.displayWorld();
+    //cave.displayWorld();
     
     cout << endl << endl;
     
+    
     while (shade.getPlayer().getPlayerHealth() > 0) {
        
-        movePlayer(shade);
-        assignShade(shade, 1, SHADE_DIFFICULTY, CIRC_DEVELOP);
-        assignBeast(shade, CIRC_DEVELOP);
+        
         shade.displayWorld();
+        movePlayer(shade);
+        playerPos = shade.getPlayer().getPlayerCoord();
+        assignShade(shade, DEFAULT_DIFF, SHADE_DIFFICULTY, CIRC_DEVELOP);
+        assignBeast(shade, CIRC_DEVELOP);
+        assignCave(shade);
+        
     }
     
     

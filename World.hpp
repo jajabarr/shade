@@ -29,8 +29,9 @@ public:
     void displayWorld();
     void displayPoint(int posX, int posY);
     Object peak(int posX, int posY);
+    
     Player& getPlayer();
-    void setPlayer(Player player1I );
+    void setPlayer(Player player1);
     
     void setRadius(double newRadius);
     double getRadius();

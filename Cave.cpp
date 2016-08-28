@@ -7,3 +7,13 @@
 //
 
 #include "Cave.hpp"
+
+Cave::Cave() {
+    
+    caveDamage = 0;
+}
+
+int Cave::getCave() {
+    
+    return caveDamage;
+}

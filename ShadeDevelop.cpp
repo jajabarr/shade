@@ -124,7 +124,7 @@ bool checkLeft(World world, int& posX, int& posY, int x, int y, int devType) {
     } else {
         
         for (int x = 0; x < WORLD_SIZE_X; x++) {
-            for (int y = 0; y < WORLD_SIZE_X; y++) {
+            for (int y = 0; y < WORLD_SIZE_Y; y++) {
                 
                 if (world.isEmpty(x, y)) {
                     
@@ -135,7 +135,6 @@ bool checkLeft(World world, int& posX, int& posY, int x, int y, int devType) {
                         
                         posX = x;
                         posY = y;
-                        
                         
                         return true;
                     }
@@ -258,10 +257,11 @@ bool checkRad(World world, Position position) {
     if (position.getDistance(world.getCenter()) >
          world.getRadius()) {
         
+        
         return true;
     }
-        
-
+    
+    
     return false;
     
 }

@@ -107,6 +107,7 @@ void Position::moveDown() {
 
 double Position::getDistance(Position position) {
     
+
     return sqrt(pow((position.getX() - x), 2) +
                 pow((2 * (position.getY() - y)), 2));
     
