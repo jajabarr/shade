@@ -48,12 +48,11 @@ int main() {
             
         } else {
             
+            shade.deleteCave();
             cave.displayWorld();
             movePlayer(cave);
             shade.getPlayer().setCave(cave.getPlayer().getCavePos());
-            ////FIXME
-            cout << cave.getPlayer().getCavePos() << " ";
-            cout << cave.getPlayer().getPlayerCoord() << endl;
+            shade.getPlayer().setPlayerSteps(cave.getPlayer().getPlayerSteps());
         }
         
     }

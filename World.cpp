@@ -20,6 +20,9 @@ World::World() {
     
     radius = radPoint.getDistance(center);
     
+    caveCoord.setX(0);
+    caveCoord.setY(0);
+    
 }
 
 void World::setNumBeasts(int num) {
@@ -102,6 +105,24 @@ Position World::getCenter() {
 void World::setPlayerCave(bool caveTruth) {
  
     player.setCave(caveTruth);
+}
+
+void World::setCaveCoord(int posX, int posY) {
+    
+    caveCoord.setX(posX);
+    caveCoord.setY(posY);
+}
+
+Position World::getCaveCoord() {
+    
+    return caveCoord;
+}
+
+void World::deleteCave() {
+    
+    Object empty;
+    
+    insert(empty, caveCoord.getX(), caveCoord.getY());
 }
 
 void World::moveObject(Object& object, char direction) {

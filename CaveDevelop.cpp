@@ -19,10 +19,12 @@ void assignCave(World& world) {
             (world.getPlayer().getPlayerCoord().getY() != CENTER_POS_Y)) {
         
             world.insert(CAVE, CENTER_POS_X, CENTER_POS_Y);
+            world.setCaveCoord(CENTER_POS_X, CENTER_POS_Y);
 
         } else {
         
             world.insert(CAVE, CENTER_POS_X, CENTER_POS_Y - 1);
+            world.setCaveCoord(CENTER_POS_X, CENTER_POS_Y - 1);
         }
     }
 }

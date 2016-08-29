@@ -125,6 +125,7 @@ void Object::setObject(istream& ins) {
         
         setX(x);
         setY(y);
+        
     }
     
 }

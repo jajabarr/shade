@@ -54,6 +54,9 @@ public:
     int getNumBeasts();
     
     void setPlayerCave (bool caveTruth);
+    void setCaveCoord (int posX, int posY);
+    Position getCaveCoord();
+    void deleteCave();
     
     
     
@@ -63,6 +66,7 @@ private:
     Player player;
     Position center;
     Position radPoint;
+    Position caveCoord;
     double radius;
     int numBeasts;
     int x;
