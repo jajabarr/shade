@@ -226,7 +226,7 @@ void World::moveObject(Object& object, char direction) {
             player.killPlayer();
         }
         
-    } else if (future.getType() == CAVE) {
+    } else if ((future.getType() == CAVE) && (object.getType() == PLAYER)) {
         
         setPlayerCave(true);
         
@@ -234,7 +234,7 @@ void World::moveObject(Object& object, char direction) {
     
     if (player.getCavePos()) {
         
-        if ((player.getPlayerCoord().getY() == CAVE_START_Y + 1) &&
+        if ((player.getPlayerCoord().getY() == CAVE_START_Y - 1) &&
             (direction == MOVE_DOWN)) {
             
             setPlayerCave(false);
