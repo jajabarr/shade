@@ -2,8 +2,8 @@
 //  Support.hpp
 //  Shade
 //
-//  Created by Jacob Barr on 3/18/16.
-//  Copyright © 2016 Jacob Barr. All rights reserved.
+//  Created by jajabarr on 3/18/16.
+//  Copyright © 2016 jajabarr. All rights reserved.
 //
 
 #ifndef Support_h

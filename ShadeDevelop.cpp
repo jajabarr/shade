@@ -2,8 +2,8 @@
 //  ShadeDevelope.cpp
 //  Shade
 //
-//  Created by Jacob Barr on 3/19/16.
-//  Copyright © 2016 Jacob Barr. All rights reserved.
+//  Created by jajabarr on 3/19/16.
+//  Copyright © 2016 jajabarr. All rights reserved.
 //
 
 #include "ShadeDevelop.hpp"

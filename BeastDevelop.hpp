@@ -3,7 +3,7 @@
 //  Shade
 //
 //  Created by prog on 4/27/16.
-//  Copyright © 2016 Jacob Barr. All rights reserved.
+//  Copyright © 2016 jajabarr. All rights reserved.
 //
 
 #ifndef BeastDevelop_hpp
