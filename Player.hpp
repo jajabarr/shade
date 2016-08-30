@@ -25,6 +25,8 @@ private:
     string playerName;
     Position playerCoord;
     bool inCave;
+    int caveVisits;
+    
     
 public:
     
@@ -53,6 +55,10 @@ public:
     
     bool getCavePos();
     void setCave(bool caveman);
+    
+    int getNumVisits();
+    void setNumVisits(int numVisits);
+    void addVisit();
     
     
     

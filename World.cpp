@@ -241,7 +241,7 @@ void World::moveObject(Object& object, char direction) {
         
     } else if (future.getType() == DARK) {
         
-        insert(shade, temp.getX(), temp.getY());
+        insert(blank, temp.getX(), temp.getY());
         
         if (object.getType() == PLAYER) {
             player.killPlayer();
@@ -250,7 +250,8 @@ void World::moveObject(Object& object, char direction) {
     } else if ((future.getType() == CAVE) && (object.getType() == PLAYER)) {
         
         setPlayerCave(true);
-        
+        getPlayer().addVisit();
+        player.addHealth();
     }
     
     if (player.getCavePos()) {
@@ -341,6 +342,7 @@ void World::setPlayer(Player player1) {
     player.setPlayerHealth(player1.getPlayerHealth());
     player.setPlayerSteps(player1.getPlayerSteps());
     player.setCave(player1.getCavePos());
+    player.setNumVisits(player1.getNumVisits());
     
 }
 

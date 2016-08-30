@@ -68,6 +68,7 @@ void Object::setObject(istream& ins) {
     
     int health;
     int steps;
+    int visits;
     int x;
     int y;
     int id;
@@ -77,11 +78,12 @@ void Object::setObject(istream& ins) {
     
     if (objectType == PLAYER) {
         
-        ins >> name >> health >> steps >> x >> y;
+        ins >> name >> health >> steps >> visits >> x >> y;
         
         setPlayerName(name);
         setPlayerHealth(health);
         setPlayerSteps(steps);
+        setNumVisits(visits);
         
         setPlayerCoord(x, y);
         
@@ -139,7 +141,8 @@ void Object::getObject(ostream& outs) {
     if (objectType == PLAYER) {
         
         outs << getPlayerName() << space << getPlayerHealth() << space;
-        outs << getPlayerSteps() << space << getX() << space << getY();
+        outs << getPlayerSteps() << space << getNumVisits() << space;
+        outs << getX() << space << getY();
         
     } else if (objectType == BEAST) {
         

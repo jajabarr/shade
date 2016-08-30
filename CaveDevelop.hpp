@@ -18,4 +18,6 @@
 
 void assignCave(World& world);
 
+void caveText(Player player1);
+
 #endif /* CaveDevelop_hpp */

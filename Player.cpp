@@ -14,6 +14,7 @@ Player::Player() {
     playerSteps = 0;
     playerName = "";
     inCave = false;
+    caveVisits = 0;
     
 }
 
@@ -23,7 +24,8 @@ void Player::printPlayer() {
     
     cout << playerName << space << space;
     cout << "HP: " << playerHealth << space << space;
-    cout << "Steps: " << playerSteps;
+    cout << "Steps: " << playerSteps << space << space;
+    cout << "Caves: " << caveVisits;
     cout << endl << endl;
 }
 
@@ -95,6 +97,30 @@ void Player::setCave(bool caveman) {
 bool Player::getCavePos() {
     
     return inCave;
+}
+
+int Player::getNumVisits() {
+    
+    return caveVisits;
+}
+
+void Player::setNumVisits(int numVisits) {
+    
+    if (numVisits < 0) {
+        
+        caveVisits = 0;
+        
+    } else {
+        
+        caveVisits = numVisits;
+        
+    }
+    
+}
+
+void Player::addVisit() {
+    
+    caveVisits++;
 }
 
 void Player::addStep() {

@@ -56,7 +56,7 @@ void assignBeast(World& world, int devType) {
             assignments++;
         }
         
-        moveNum = MOVE_DIFF_THREE;
+        moveNum = MOVE_DIFF_TWO;
         
     }
     

@@ -38,6 +38,7 @@ int main() {
         
         if (!shade.getPlayer().getCavePos()) {
        
+            
             shade.displayWorld();
             movePlayer(shade);
             playerPos = shade.getPlayer().getPlayerCoord();
@@ -49,7 +50,10 @@ int main() {
         } else {
             
             shade.deleteCave();
+            cave.getPlayer().setNumVisits(shade.getPlayer().getNumVisits());
+            cave.getPlayer().setPlayerName(shade.getPlayer().getPlayerName());
             cave.displayWorld();
+            caveText(cave.getPlayer());
             movePlayer(cave);
             shade.getPlayer().setCave(cave.getPlayer().getCavePos());
             shade.getPlayer().setPlayerSteps(cave.getPlayer().getPlayerSteps());
