@@ -19,6 +19,7 @@
 
 void assignBeast(World& world, int devType);
 void moveBeasts(World& world);
+void moveBeastsAway(World& world);
 bool checkBeasts(Object beasts[], int size, Object test);
 
 

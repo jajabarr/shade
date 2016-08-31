@@ -117,6 +117,92 @@ void moveBeasts(World& world) {
     }
 }
 
+void moveBeastsAway(World& world) {
+    
+    char direction = ' ';
+    Position checkPos;
+    Object beasts[MAX_BEASTS];
+    int z = 0;
+    
+    int num = world.getPlayer().getNumVisits();
+    
+    switch(num) {
+        case 1:
+            num = 7;
+            break;
+        case 2:
+            num = 6;
+            break;
+        case 3:
+            num = 5;
+            break;
+        case 4:
+            num = 4;
+            break;
+        case 5:
+            num = 3;
+            break;
+        case 6:
+            num = 2;
+            break;
+        case 7:
+            num = 1;
+            break;
+        default:
+            num = 0;
+            break;
+    }
+    
+    for (int k = 0; k < num; k++) {
+        
+        z = 0;
+        
+        for (int i = 0; i < WORLD_SIZE_Y; i++) {
+            for (int j = 0; j < WORLD_SIZE_X; j++) {
+                
+                if (world.peak(j, i).getType() == BEAST) {
+                    
+                    beasts[z] = world.peak(j,i);
+                    
+                    Object temp = world.peak(j, i);
+                    
+                    if (checkBeasts(beasts, (z), temp)) {
+                        
+                        checkPos.setX(temp.getX());
+                        checkPos.setY(temp.getY());
+                        
+                        direction = world.getPlayer().getPlayerCoord().
+                        closeDistance(checkPos);
+                        
+                        switch(direction) {
+                            case MOVE_UP:
+                                direction = MOVE_DOWN;
+                                break;
+                            case MOVE_DOWN:
+                                direction = MOVE_UP;
+                                break;
+                            case MOVE_LEFT:
+                                direction = MOVE_RIGHT;
+                                break;
+                            default:
+                                direction = MOVE_LEFT;
+                                break;
+                                
+                        }
+                        
+                        world.moveObject(temp, direction);
+                        
+                    }
+                }
+                
+                z++;
+            }
+        }
+
+    }
+    
+}
+
 bool checkBeasts(Object beasts[], int size, Object test) {
     
     for (int i = 0; i < size; i++) {

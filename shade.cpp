@@ -29,8 +29,6 @@ int main() {
     
     addShade(shade);
     
-    //cave.displayWorld();
-    
     cout << endl << endl;
     
     
@@ -57,6 +55,10 @@ int main() {
             shade.getPlayer().setCave(cave.getPlayer().getCavePos());
             cave.getPlayer().setPlayerSteps(shade.getPlayer().getPlayerSteps());
             shade.getPlayer().setPlayerHealth(cave.getPlayer().getPlayerHealth());
+            
+            if (!shade.getPlayer().getCavePos()) {
+                moveBeastsAway(shade);
+            }
         }
         
     }
