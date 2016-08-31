@@ -58,12 +58,12 @@ const int CIRC_DEVELOP = 2;
 const int RAD_X = 25;
 const int RAD_Y = 0;
 
-const string SAVE_1 = "//Users//Shared//Progs//Shade//Shade//Shade//save1.txt";
-const string SAVE_2 = "//Users//Shared//Progs//Shade//Shade//Shade//save2.txt";
-const string SAVE_3 = "//Users//Shared//Progs//Shade//Shade//Shade//save3.txt";
-const string DEFAULT = "//Users//Shared//Progs//Shade//Shade//Shade//default.txt";
-const string SHADE_FILE = "//Users//Shared//Progs//Shade//Shade//Shade//shade.txt";
-const string CAVE_FILE = "//Users//Shared//Progs//Shade//Shade//Shade//cave.txt";
+const string SAVE_1 = "save1.txt";
+const string SAVE_2 = "save2.txt";
+const string SAVE_3 = "save3.txt";
+const string DEFAULT = "default.txt";
+const string SHADE_FILE = "shade.txt";
+const string CAVE_FILE = "cave.txt";
 
 const string RAD_STRING = "rad: ";
 const string RAD_POINT = "Rxy: ";

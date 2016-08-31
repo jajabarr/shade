@@ -377,7 +377,7 @@ void normalDevelopment(World shade) {
     
     assignShade(world, assignments, difficulty, NORM_DEVELOP);
     
-    shadeFile.open(SHADE_FILE);
+    shadeFile.open(SHADE_FILE.c_str());
     
     if (!shadeFile.is_open()) {
         
@@ -409,7 +409,7 @@ void circularDevelopment (World shade) {
     
     assignShade(world, assignments, difficulty, CIRC_DEVELOP);
     
-    shadeFile.open(SHADE_FILE);
+    shadeFile.open(SHADE_FILE.c_str());
     
     if (!shadeFile.is_open()) {
         
@@ -430,7 +430,7 @@ void addShade(World& world) {
     
     ifstream inFile;
     
-    inFile.open(SHADE_FILE);
+    inFile.open(SHADE_FILE.c_str());
     
     if (!inFile.is_open()) {
         

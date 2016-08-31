@@ -12,11 +12,11 @@ void defaultWorld(World& world) {
     
     ifstream defaultFile;
     
-    defaultFile.open(DEFAULT);
+    defaultFile.open(DEFAULT.c_str());
     
     if (!defaultFile.is_open()) {
         
-        cout << "ERROR";
+        cout << "ERROR: DEFAULT.OPEN";
     }
     
     defaultFile >> world;
@@ -28,11 +28,11 @@ void caveWorld(World& world) {
     
     ifstream caveFile;
     
-    caveFile.open(CAVE_FILE);
+    caveFile.open(CAVE_FILE.c_str());
     
     if (!caveFile.is_open()) {
         
-        cout << "ERROR";
+        cout << "ERROR: CAVE_FILE.OPEN";
     }
     
     caveFile >> world;
