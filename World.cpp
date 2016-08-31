@@ -251,15 +251,24 @@ void World::moveObject(Object& object, char direction) {
         
         setPlayerCave(true);
         getPlayer().addVisit();
-        player.addHealth();
+        
+    } else if ((future.getType() == WIZARD) && (object.getType() == PLAYER)) {
+        
+        if (player.getCavePos() && !player.getWizTouch()) {
+            
+            player.setWizTouch(true);
+            player.addHealth();
+        }
     }
+    
     
     if (player.getCavePos()) {
         
-        if ((player.getPlayerCoord().getY() == CAVE_START_Y - 1) &&
+        if ((player.getPlayerCoord().getY() == (CAVE_START_Y)) &&
             (direction == MOVE_DOWN)) {
             
             setPlayerCave(false);
+            player.setWizTouch(false);
         }
     }
     

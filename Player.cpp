@@ -118,6 +118,17 @@ void Player::setNumVisits(int numVisits) {
     
 }
 
+bool Player::getWizTouch() {
+    
+    return wizTouch;
+}
+
+void Player::setWizTouch(bool touchWiz) {
+    
+    wizTouch = touchWiz;
+    
+}
+
 void Player::addVisit() {
     
     caveVisits++;

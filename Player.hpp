@@ -26,6 +26,7 @@ private:
     Position playerCoord;
     bool inCave;
     int caveVisits;
+    bool wizTouch;
     
     
 public:
@@ -59,6 +60,10 @@ public:
     int getNumVisits();
     void setNumVisits(int numVisits);
     void addVisit();
+    
+    bool getWizTouch();
+    void setWizTouch(bool touchWiz);
+    
     
     
     
