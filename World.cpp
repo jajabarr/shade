@@ -268,7 +268,7 @@ void World::moveObject(Object& object, char direction) {
     }
     
     
-    if (player.getCavePos()) {
+    if (player.getCavePos() && player.getWizTouch()) {
         
         if ((player.getPlayerCoord().getY() == (CAVE_START_Y)) &&
             (direction == MOVE_DOWN)) {

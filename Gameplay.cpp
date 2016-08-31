@@ -74,3 +74,8 @@ void movePlayer(World& world) {
     
     
 }
+
+void newScreen() {
+    
+    cout << "\n \n \n \n \n \n \n \n \n \n";
+}

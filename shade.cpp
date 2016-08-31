@@ -63,6 +63,13 @@ int main() {
         
     }
     
+    newScreen();
+    newScreen();
+    newScreen();
+    cout << "       The world was consumed in shade.";
+    newScreen();
+    newScreen();
+    
     
      
     return 0;
