@@ -58,6 +58,9 @@ public:
     Position getCaveCoord();
     void deleteCave();
     
+    bool getPlayerHit();
+    void setPlayerHit(bool isPlayeHit);
+    
     
     
     
@@ -70,6 +73,7 @@ private:
     Position caveCoord;
     double radius;
     int numBeasts;
+    bool playerHit;
     int x;
     int y;
 };

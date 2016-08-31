@@ -23,6 +23,8 @@ World::World() {
     caveCoord.setX(0);
     caveCoord.setY(0);
     
+    playerHit = false;
+    
 }
 
 void World::setNumBeasts(int num) {
@@ -196,6 +198,8 @@ void World::moveObject(Object& object, char direction) {
         player.addStep();
         object.addStep();
         
+        setPlayerHit(true);
+        
         if (object.getPlayerHealth() <= 0) {
             
             insert(blank, temp.getX(), temp.getY());
@@ -207,6 +211,7 @@ void World::moveObject(Object& object, char direction) {
             
         }
         
+        
     } else if ((future.getType() == PLAYER) && (object.getType() == BEAST)) {
         
         future.setPlayerHealth(player.getPlayerHealth());
@@ -214,6 +219,7 @@ void World::moveObject(Object& object, char direction) {
                                object.getBeastDamage());
         
         player.setPlayerHealth(future.getPlayerHealth());
+        setPlayerHit(true);
         
         
         if (future.getPlayerHealth() <= 0) {
@@ -272,6 +278,16 @@ void World::moveObject(Object& object, char direction) {
         }
     }
     
+}
+
+bool World::getPlayerHit() {
+    
+    return playerHit;
+}
+
+void World::setPlayerHit(bool isPlayerHit) {
+    
+    playerHit = isPlayerHit;
 }
 
 void World::load(istream& ins) {
@@ -381,6 +397,13 @@ void World::displayWorld() {
         
         cout << endl;
     }
+    
+    if (playerHit) {
+        
+        cout << "\n The beasts have sharp fangs... \n \n";
+    }
+    
+    setPlayerHit(false);
 }
 
 void World::displayPoint(int posX, int posY) {
