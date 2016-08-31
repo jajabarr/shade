@@ -88,17 +88,18 @@ void moveBeasts(World& world) {
     char direction = ' ';
     Position checkPos;
     Object beasts[MAX_BEASTS];
+    int z = 0;
     
     for (int i = 0; i < WORLD_SIZE_Y; i++) {
         for (int j = 0; j < WORLD_SIZE_X; j++) {
             
             if (world.peak(j, i).getType() == BEAST) {
                 
-                beasts[i + j] = world.peak(j,i);
+                beasts[z] = world.peak(j,i);
                 
                 Object temp = world.peak(j, i);
                 
-                if (checkBeasts(beasts, (i + j), temp)) {
+                if (checkBeasts(beasts, (z), temp)) {
                     
                     checkPos.setX(temp.getX());
                     checkPos.setY(temp.getY());
@@ -110,6 +111,8 @@ void moveBeasts(World& world) {
                     
                 }
             }
+            
+            z++;
         }
     }
 }
