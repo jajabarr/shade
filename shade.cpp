@@ -56,7 +56,7 @@ int main() {
             caveText(cave.getPlayer());
             movePlayer(cave);
             shade.getPlayer().setCave(cave.getPlayer().getCavePos());
-            shade.getPlayer().setPlayerSteps(cave.getPlayer().getPlayerSteps());
+            cave.getPlayer().setPlayerSteps(shade.getPlayer().getPlayerSteps());
             shade.getPlayer().setPlayerHealth(cave.getPlayer().getPlayerHealth());
         }
         
