@@ -61,6 +61,8 @@ public:
     bool getPlayerHit();
     void setPlayerHit(bool isPlayeHit);
     
+    void endGame();
+    
     
     
     

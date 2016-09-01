@@ -265,7 +265,12 @@ void World::moveObject(Object& object, char direction) {
             player.setWizTouch(true);
             player.addHealth();
             
-            insert(blank, object.getX(), object.getY());
+            if (player.getNumVisits() == LAST_CAVE) {
+                
+                insert(blank, object.getX(), object.getY());
+                
+            }
+            
         }
     }
     
@@ -278,8 +283,6 @@ void World::moveObject(Object& object, char direction) {
             setPlayerCave(false);
             player.setWizTouch(false);
             
-            Object wizard(WIZARD);
-            insert(wizard, CENTER_POS_X, CENTER_POS_Y);
             
         }
     }
@@ -377,6 +380,21 @@ void World::setPlayer(Player player1) {
     
 }
 
+void World::endGame() {
+    
+    Object empty;
+    
+    for (int i = 0; i <  WORLD_SIZE_Y; i++) {
+        for (int j = 0; j < WORLD_SIZE_X; j++) {
+            
+            if (peak(j, i).getType() != PLAYER) {
+                
+                insert(empty, j, i);
+            }
+        }
+    }
+}
+
 void World::deleteWorld() {
     
     Object newWorld;
@@ -392,7 +410,11 @@ void World::deleteWorld() {
 
 void World::displayWorld() {
     
-    player.printPlayer();
+    if((getPlayer().getNumVisits() < LAST_CAVE) ||
+       (getPlayer().getCavePos())) {
+        
+        player.printPlayer();
+    }
     
     for (int i = 0; i < WORLD_SIZE_Y; i++) {
         
@@ -410,6 +432,7 @@ void World::displayWorld() {
     }
     
     setPlayerHit(false);
+    
 }
 
 void World::displayPoint(int posX, int posY) {

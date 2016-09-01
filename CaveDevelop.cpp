@@ -63,8 +63,8 @@ void caveText(Player player1) {
                 cout << "\"Why don't you keep me company, before we depart?\" \n \n";
                 break;
             case 8:
-                cout << "\n Wizard: ";
-                cout << "\"I knew you could make it. You have done so well.\" \n \n";
+                cout << "\n ...";
+                cout << "A cool wind blows. \n \n";
                 break;
             default:
                 cout << "\n Wizard: \"The shadows are close.\" \n \n";

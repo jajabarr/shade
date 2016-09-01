@@ -22,6 +22,7 @@ void defaultWorld(World& world);
 void caveWorld(World& world);
 void movePlayer(World& world);
 void newScreen();
+void endTitle();
 int checkDiff(World world);
 
 

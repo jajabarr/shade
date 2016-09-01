@@ -93,6 +93,15 @@ int checkDiff (World world) {
     
 }
 
+void endTitle() {
+    
+    cout << "\n The air is warm, isn't it? \n \n";
+    
+    string eat;
+    
+    getline(cin, eat);
+}
+
 void newScreen() {
     
     cout << "\n \n \n \n \n \n \n \n \n \n";

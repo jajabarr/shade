@@ -40,6 +40,8 @@ const int BEAST_DIFFICULTY_FIVE = 750;
 
 const int CAVE_SPAWN = 100;
 
+const int LAST_CAVE = 8;
+
 const int SPAWN_ONE = 7;
 const int SPAWN_TWO = 5;
 const int SPAWN_THREE = 3;

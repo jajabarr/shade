@@ -19,6 +19,7 @@ int main() {
     
     World shade;
     World cave;
+    World endWorld;
     Position playerPos;
     
     defaultWorld(shade);
@@ -34,7 +35,8 @@ int main() {
     
     while (shade.getPlayer().getPlayerHealth() > 0) {
         
-        if (!shade.getPlayer().getCavePos()) {
+        if (!shade.getPlayer().getCavePos() &&
+            shade.getPlayer().getNumVisits() < LAST_CAVE) {
        
             assignShade(shade, DEFAULT_DIFF, SHADE_DIFFICULTY, CIRC_DEVELOP);
             assignBeast(shade, CIRC_DEVELOP);
@@ -45,7 +47,7 @@ int main() {
             assignCave(shade);
             
                        
-        } else {
+        } else if (shade.getPlayer().getCavePos()) {
             
             shade.deleteCave();
             cave.getPlayer().setNumVisits(shade.getPlayer().getNumVisits());
@@ -60,6 +62,14 @@ int main() {
             if (!shade.getPlayer().getCavePos()) {
                 moveBeastsAway(shade);
             }
+            
+        } else {
+            
+            shade.endGame();
+            shade.displayWorld();
+            endTitle();
+            movePlayer(shade);
+            
         }
         
     }
@@ -70,6 +80,7 @@ int main() {
     cout << "       The world was consumed in shade.";
     newScreen();
     newScreen();
+    
     
     
      
