@@ -126,33 +126,6 @@ void moveBeastsAway(World& world) {
     
     int num = world.getPlayer().getNumVisits();
     
-    switch(num) {
-        case 1:
-            num = 7;
-            break;
-        case 2:
-            num = 6;
-            break;
-        case 3:
-            num = 5;
-            break;
-        case 4:
-            num = 4;
-            break;
-        case 5:
-            num = 3;
-            break;
-        case 6:
-            num = 2;
-            break;
-        case 7:
-            num = 1;
-            break;
-        default:
-            num = 0;
-            break;
-    }
-    
     for (int k = 0; k < num; k++) {
         
         z = 0;

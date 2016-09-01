@@ -75,6 +75,24 @@ void movePlayer(World& world) {
     
 }
 
+int checkDiff (World world) {
+    
+    int diff = 0;
+    
+    double check1 = 0.0;
+    int check2 = 0;
+    
+    check1 = double(world.getPlayer().getPlayerSteps()) / DEFAULT_DIFF;
+    check2 = floor(check1);
+    
+    check1 = check1 - check2;
+    
+    diff = ceil(check1 - .5);
+    
+    return diff;
+    
+}
+
 void newScreen() {
     
     cout << "\n \n \n \n \n \n \n \n \n \n";

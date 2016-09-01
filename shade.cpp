@@ -21,13 +21,13 @@ int main() {
     World cave;
     Position playerPos;
     
-    
     defaultWorld(shade);
     circularDevelopment(shade);
     
     caveWorld(cave);
     
     addShade(shade);
+    
     
     cout << endl << endl;
     
@@ -43,7 +43,8 @@ int main() {
             playerPos = shade.getPlayer().getPlayerCoord();
             cave.setPlayer(shade.getPlayer());
             assignCave(shade);
-           
+            
+                       
         } else {
             
             shade.deleteCave();

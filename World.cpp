@@ -264,6 +264,8 @@ void World::moveObject(Object& object, char direction) {
             
             player.setWizTouch(true);
             player.addHealth();
+            
+            insert(blank, object.getX(), object.getY());
         }
     }
     
@@ -275,6 +277,10 @@ void World::moveObject(Object& object, char direction) {
             
             setPlayerCave(false);
             player.setWizTouch(false);
+            
+            Object wizard(WIZARD);
+            insert(wizard, CENTER_POS_X, CENTER_POS_Y);
+            
         }
     }
     
