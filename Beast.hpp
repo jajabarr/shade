@@ -19,6 +19,7 @@ private:
     
     int beastDamage;
     int beastID;
+    bool smartBeast;
     
 public:
     
@@ -31,6 +32,9 @@ public:
     
     void setBeastID(int id);
     int getBeastID();
+    
+    void setSmartBeast(bool smart);
+    bool getSmartBeast();
     
     
 };

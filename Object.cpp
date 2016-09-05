@@ -72,6 +72,7 @@ void Object::setObject(istream& ins) {
     int x;
     int y;
     int id;
+    bool smart;
     string name;
     
     ins >> objectType;
@@ -95,7 +96,7 @@ void Object::setObject(istream& ins) {
         
     } else if (objectType == BEAST) {
         
-        ins >> damage >> id >> x >> y;
+        ins >> damage >> id >> smart >> x >> y;
         
         setX(x);
         setY(y);
@@ -146,7 +147,8 @@ void Object::getObject(ostream& outs) {
         
     } else if (objectType == BEAST) {
         
-        outs << damage << space << getBeastID() << getX() << space << getY();
+        outs << damage << space << getBeastID() << space;
+        cout << getSmartBeast() << space << getX() << space << getY();
         
     } else if (objectType == DARK) {
         

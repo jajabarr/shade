@@ -12,6 +12,7 @@ Beast::Beast() {
     
     beastDamage = 1;
     beastID = 0;
+    smartBeast = false;
 }
 
 void Beast::setBeastDamage(int dmg) {
@@ -41,3 +42,14 @@ int Beast::getBeastID() {
     
     return beastID;
 }
+
+void Beast::setSmartBeast(bool smart) {
+    
+    smartBeast = smart;
+}
+
+bool Beast::getSmartBeast() {
+    
+    return smartBeast;
+}
+

@@ -68,6 +68,13 @@ void assignBeast(World& world, int devType) {
         beast.setY(y);
         
         beast.setBeastID(world.getNumBeasts());
+        
+        if (beast.getBeastID() % MOVE_DIFF_TWO) {
+            
+            beast.setSmartBeast(true);
+            
+        }
+        
         world.addBeast();
         
         world.insert(beast, x, y);
@@ -104,8 +111,16 @@ void moveBeasts(World& world) {
                     checkPos.setX(temp.getX());
                     checkPos.setY(temp.getY());
                     
-                    direction = world.getPlayer().getPlayerCoord().
-                    closeDistance(checkPos);
+                    if (temp.getSmartBeast()) {
+                        
+                        direction = world.getPlayer().getPlayerCoord().
+                        secondDistance(checkPos);
+                        
+                    } else {
+                    
+                        direction = world.getPlayer().getPlayerCoord().
+                        closeDistance(checkPos);
+                    }
                     
                     world.moveObject(temp, direction);
                     

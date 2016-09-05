@@ -49,6 +49,7 @@ public:
     
     double getDistance(Position position);
     char closeDistance(Position position);
+    char secondDistance(Position position);
     
     void setCenter();
 };

@@ -156,6 +156,50 @@ char Position::closeDistance(Position position) {
     
 }
 
+char Position::secondDistance(Position position) {
+    
+    Position moveUp = position;
+    Position moveDown = position;
+    Position moveLeft = position;
+    Position moveRight = position;
+    
+    moveUp.moveUp();
+    moveDown.moveDown();
+    moveLeft.moveLeft();
+    moveRight.moveRight();
+    
+    int index = 0;
+    
+    char direction = ' ';
+    
+    double checkDist[] = {getDistance(moveUp), getDistance(moveDown),
+        getDistance(moveLeft), getDistance(moveRight)};
+    
+    index = findSecondMin(DIRECTIONS_CNT, checkDist);
+    
+    if (index == 0) {
+        
+        direction = MOVE_UP;
+        
+    } else if (index == 1) {
+        
+        direction = MOVE_DOWN;
+        
+    } else if (index == 2) {
+        
+        direction = MOVE_LEFT;
+        
+    } else {
+        
+        direction = MOVE_RIGHT;
+    }
+    
+    
+    return direction;
+    
+    
+}
+
 void Position::setCenter() {
     
     x = CENTER_POS_X;

@@ -86,6 +86,12 @@ const int DIRECTIONS_CNT = 4;
 
 int findMin(int cnt, double dists[]);
 
+double findDoubleMin (int cnt, double dists[]);
+
+double findDoubleMax(int cnt, double dists[]);
+
+int findSecondMin(int cnt, double dists[]);
+
 
 
 
