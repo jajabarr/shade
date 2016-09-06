@@ -36,11 +36,11 @@ void caveText(Player player1) {
         switch (player1.getNumVisits()) {
                 
             case 1:
-                cout << "\n Wizard: \"Stay in here. It's warm.\" \n \n";
+                cout << "\n Wizard: \"Leave now.\" \n \n";
                 break;
             case 2:
                 cout << "\n Wizard: ";
-                cout << "\"I worry about my friends. Can you help them?\" \n \n";
+                cout << "\"Look at them run. See how scared they are?\" \n \n";
                 break;
             case 3:
                 cout << "\n Wizard: ";
@@ -50,13 +50,13 @@ void caveText(Player player1) {
                 cout << "\n Wizard: \"The shade is getting so close.\" \n \n";
                 break;
             case 5:
-                cout << "\n Wizard: \"The beasts are fearful too. "
-                "They will move faster now.\" \n \n";
+                cout << "\n Wizard: \"Are you afraid of the dark? "
+                "I am.\" \n \n";
                 break;
             case 6:
-                cout << "\n Wizard: \"Stay bright, ";
+                cout << "\n Wizard: \"Do you think they are dumb, ";
                 cout << player1.getPlayerName();
-                cout << ". Your journey is nearly done.\" \n \n";
+                cout << ". They are just lke us.\" \n \n";
                 break;
             case 7:
                 cout << "\n Wizard: ";
