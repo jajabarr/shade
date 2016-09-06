@@ -40,7 +40,7 @@ const int BEAST_DIFFICULTY_FIVE = 500;
 
 const int SMART_BEAST_SPAWN = 600;
 const int SMART_BEAST_DIST_ONE = 5;
-const int SMART_BEAST_DIST_TWO = 2;
+const int SMART_BEAST_DIST_TWO = 1;
 
 const int CAVE_SPAWN = 100;
 
