@@ -173,8 +173,7 @@ void World::moveObject(Object& object, char direction) {
             break;
     }
     
-    if ((future.getType() == BEAST) && (object.getType() == BEAST) &&
-        (!object.getSmartBeast()) && !future.getSmartBeast()) {
+    if ((future.getType() == BEAST) && (object.getType() == BEAST)) {
         
         if (future.getBeastDamage() > object.getBeastDamage()) {
             
@@ -246,7 +245,7 @@ void World::moveObject(Object& object, char direction) {
         insert(object, object.getX(), object.getY());
         insert(blank, temp.getX(), temp.getY());
         
-    } else if ((future.getType() == DARK) && !object.getSmartBeast()) {
+    } else if (future.getType() == DARK) {
         
         insert(blank, temp.getX(), temp.getY());
         
