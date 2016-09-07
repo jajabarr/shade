@@ -39,8 +39,8 @@ const int BEAST_DIFFICULTY_FOUR = 400;
 const int BEAST_DIFFICULTY_FIVE = 500;
 
 const int SMART_BEAST_SPAWN = 600;
-const double SMART_BEAST_DIST_ONE = 5.0;
-const double SMART_BEAST_DIST_TWO = 2.5;
+const double SMART_BEAST_DIST_ONE = 7.5;
+const double SMART_BEAST_DIST_TWO = 5.0;
 
 const int CAVE_SPAWN = 100;
 

@@ -34,8 +34,7 @@ void assignBeast(World& world, int devType) {
         
         moveNum = MOVE_DIFF_ONE;
         
-    } else if ((world.getPlayer().getPlayerSteps() < BEAST_DIFFICULTY_THREE) ||
-               (world.getPlayer().getPlayerSteps() >= SMART_BEAST_SPAWN)) {
+    } else if ((world.getPlayer().getPlayerSteps() < BEAST_DIFFICULTY_THREE)) {
         
         if (!(world.getPlayer().getPlayerSteps() % SPAWN_THREE)) {
             assignments++;
@@ -43,7 +42,7 @@ void assignBeast(World& world, int devType) {
         
         moveNum = MOVE_DIFF_TWO;
         
-    } else if (world.getPlayer().getPlayerSteps() < BEAST_DIFFICULTY_FOUR) {
+    } else if ((world.getPlayer().getPlayerSteps() < BEAST_DIFFICULTY_FOUR)) {
         
         if (!(world.getPlayer().getPlayerSteps() % SPAWN_FOUR)) {
             assignments++;
@@ -51,7 +50,8 @@ void assignBeast(World& world, int devType) {
         
         moveNum = MOVE_DIFF_TWO;
         
-    } else if (world.getPlayer().getPlayerSteps() >= BEAST_DIFFICULTY_FOUR) {
+    } else if ((world.getPlayer().getPlayerSteps() >= BEAST_DIFFICULTY_FOUR)||
+               (world.getPlayer().getPlayerSteps() >= SMART_BEAST_SPAWN)) {
         
         if (!(world.getPlayer().getPlayerSteps() % SPAWN_FIVE)) {
             assignments++;

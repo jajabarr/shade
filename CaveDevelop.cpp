@@ -56,7 +56,7 @@ void caveText(Player player1) {
             case 6:
                 cout << "\n Wizard: \"Do you think they are dumb, ";
                 cout << player1.getPlayerName();
-                cout << ". They are just lke us.\" \n \n";
+                cout << "? They are just lke us.\" \n \n";
                 break;
             case 7:
                 cout << "\n Wizard: ";
