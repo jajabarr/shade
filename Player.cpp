@@ -14,6 +14,7 @@ Player::Player() {
     playerSteps = 0;
     playerName = "";
     inCave = false;
+    wizTouch = false;
     caveVisits = 0;
     
 }
