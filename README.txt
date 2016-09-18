@@ -1,11 +1,12 @@
 You must reach 8 caves to beat the game.
 
-As you play, the shade [S] will collpse upon you,
+As you play, the shade [S] will collapse upon you,
 and the beasts [B] will always be closer.
 
 Don't let either of them touch you.
+The Shade will kill you. The beasts will take 1hp.
 
-Wizards [W] hold mighty secrets essential to your survival.
+Wizards [W] hold mighty secrets essential to your survival. Talk to them.
 
 To move:
 
